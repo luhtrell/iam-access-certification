@@ -1,8 +1,11 @@
-﻿$ErrorActionPreference = "Stop"
+﻿param(
+    [string]$ReviewFile = "sample-review-decisions.csv"
+)
+$ErrorActionPreference = "Stop"
 
 $ProjectRoot = Split-Path $PSScriptRoot -Parent
 $FindingsPath = Join-Path $ProjectRoot "reports\access-findings.csv"
-$ReviewsPath = Join-Path $ProjectRoot "reviews\sample-review-decisions.csv"
+$ReviewsPath = Join-Path $ProjectRoot "reviews\$ReviewFile"
 $OutputPath = Join-Path $ProjectRoot "reports\review-validation.csv"
 
 foreach ($Path in @($FindingsPath, $ReviewsPath)) {

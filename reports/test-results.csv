@@ -1,0 +1,6 @@
+﻿TestCase,ExpectedStatus,ActualStatus,Result
+Duplicate decisions,DuplicateDecisions,DuplicateDecisions,Pass
+Invalid decision,InvalidDecision,InvalidDecision,Pass
+Missing decision,MissingDecision,MissingDecision,Pass
+Missing reviewer,IncompleteReview,IncompleteReview,Pass
+Missing justification,IncompleteReview,IncompleteReview,Pass

@@ -1,7 +1,9 @@
 ﻿$ErrorActionPreference = "Stop"
 
 $ProjectRoot = Split-Path $PSScriptRoot -Parent
+
 $FindingsPath = Join-Path $ProjectRoot "reports\access-findings.csv"
+$ValidationPath = Join-Path $ProjectRoot "reports\review-validation.csv"
 $SummaryPath = Join-Path $ProjectRoot "reports\audit-summary.csv"
 
 if (-not (Test-Path $FindingsPath)) {
@@ -9,6 +11,13 @@ if (-not (Test-Path $FindingsPath)) {
 }
 
 $Findings = @(Import-Csv $FindingsPath)
+if (Test-Path $ValidationPath) {
+    $Validation = @(Import-Csv $ValidationPath)
+}
+else {
+    $Validation = @()
+    Write-Warning "Validation report not found. Validation metrics will be zero."
+}
 
 $Summary = @(
     [PSCustomObject]@{
@@ -30,6 +39,31 @@ $Summary = @(
     [PSCustomObject]@{
         Metric = "Terminated Employee Access"
         Value = @($Findings | Where-Object FindingType -eq "TerminatedEmployeeAccess").Count
+    }
+        [PSCustomObject]@{
+        Metric = "Review Decisions Recorded"
+        Value = @($Validation | Where-Object {
+            $_.ValidationStatus -eq "DecisionRecorded"
+        }).Count
+    }
+    [PSCustomObject]@{
+        Metric = "Incomplete Reviews"
+        Value = @($Validation | Where-Object {
+            $_.ValidationStatus -eq "IncompleteReview" -or
+            $_.ValidationStatus -eq "MissingDecision"
+        }).Count
+    }
+    [PSCustomObject]@{
+        Metric = "Duplicate Decisions"
+        Value = @($Validation | Where-Object {
+            $_.ValidationStatus -eq "DuplicateDecisions"
+        }).Count
+    }
+    [PSCustomObject]@{
+        Metric = "Invalid Decisions"
+        Value = @($Validation | Where-Object {
+            $_.ValidationStatus -eq "InvalidDecision"
+        }).Count
     }
 )
 
