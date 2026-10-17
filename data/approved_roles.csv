@@ -1,0 +1,12 @@
+﻿Department,JobTitle,ApprovedRole
+Finance,Financial Analyst,Finance_Read
+Finance,Financial Analyst,Reporting_Read
+Finance,Finance Manager,Finance_Read
+Finance,Finance Manager,Reporting_Read
+Finance,Finance Manager,Finance_Approver
+IT,Help Desk Analyst,Helpdesk_Tier1
+IT,Help Desk Analyst,Directory_Read
+HR,HR Specialist,HR_Read
+HR,HR Specialist,HR_Records_Edit
+Sales,Sales Associate,CRM_Read
+Sales,Sales Associate,CRM_Edit

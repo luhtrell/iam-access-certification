@@ -1,0 +1,3 @@
+﻿"EmployeeID","Name","Role","FindingType","Decision","Reviewer","ValidationStatus","Justification"
+"E1001","Jordan Lee","Finance_Approver","UnauthorizedRole","Revoke","Access Reviewer","DecisionRecorded","Role is not approved for the Financial Analyst job title"
+"E1005","Jamie Patel","CRM_Read","TerminatedEmployeeAccess","Revoke","Access Reviewer","DecisionRecorded","Employee is terminated and access should be removed through the approved process"

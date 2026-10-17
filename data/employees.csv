@@ -1,0 +1,6 @@
+﻿EmployeeID,Name,Department,JobTitle,Status,Manager
+E1001,Jordan Lee,Finance,Financial Analyst,Active,Alex Morgan
+E1002,Taylor Brooks,IT,Help Desk Analyst,Active,Casey Rivera
+E1003,Sam Carter,HR,HR Specialist,Active,Alex Morgan
+E1004,Morgan Reed,Finance,Finance Manager,Active,Alex Morgan
+E1005,Jamie Patel,Sales,Sales Associate,Terminated,Casey Rivera

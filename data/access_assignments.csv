@@ -1,0 +1,11 @@
+﻿EmployeeID,Role,AssignedDate,ApprovedBy
+E1001,Finance_Read,2026-08-01,Alex Morgan
+E1001,Reporting_Read,2026-08-01,Alex Morgan
+E1001,Finance_Approver,2026-08-01,Alex Morgan
+E1002,Helpdesk_Tier1,2026-08-02,Casey Rivera
+E1002,Directory_Read,2026-08-02,Casey Rivera
+E1003,HR_Read,2026-08-03,Alex Morgan
+E1003,HR_Records_Edit,2026-08-03,Alex Morgan
+E1004,Finance_Read,2026-08-04,Alex Morgan
+E1004,Reporting_Read,2026-08-04,Alex Morgan
+E1005,CRM_Read,2026-08-05,Casey Rivera

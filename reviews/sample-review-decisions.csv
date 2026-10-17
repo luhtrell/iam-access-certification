@@ -1,0 +1,3 @@
+﻿EmployeeID,Role,Decision,Reviewer,Justification,ReviewDate
+E1001,Finance_Approver,Revoke,Access Reviewer,Role is not approved for the Financial Analyst job title,2026-10-17
+E1005,CRM_Read,Revoke,Access Reviewer,Employee is terminated and access should be removed through the approved process,2026-10-17
