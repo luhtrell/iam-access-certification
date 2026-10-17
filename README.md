@@ -31,15 +31,25 @@ All identities and access records in this project are fictional.
 - `Export-AuditReport.ps1` — summarizes findings by severity and type.
 - `Test-ReviewDecisions.ps1` — validates that findings have documented review decisions.
 - `New-AuditTrail.ps1` — combines findings and review decisions into an audit trail.
+- `Update-RemediationTracker.ps1` — creates or updates the remediation tracker while preserving existing remediation progress.
+- `Update-RemediationStatus.ps1` — updates a finding's remediation status, owner, and notes, with validation for closure notes.
 
 ## How to Run
-Open PowerShell in the project root and run:
+
+Open PowerShell in the project root and run the scripts in the following order:
 
 ```powershell
 .\scripts\Find-AccessViolations.ps1
-.\scripts\Export-AuditReport.ps1
-.\scripts\Test-ReviewDecisions.ps1
+.\scripts\Run-AllTests.ps1
+.\scripts\Test-ReviewDecisions.ps1 -ReviewFile "sample-review-decisions.csv"
 .\scripts\New-AuditTrail.ps1
+.\scripts\Update-RemediationTracker.ps1
+.\scripts\Export-AuditReport.ps1
+```
+
+The test runner checks five review-validation scenarios: valid decisions, duplicate decisions, incomplete reviews, invalid decisions, and missing decisions.
+
+Use `Update-RemediationStatus.ps1` to record remediation progress. Review the generated reports in `reports/` after running the workflow.
 ```
 
 Run the scripts in this order because later scripts use reports

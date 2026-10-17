@@ -1,3 +1,3 @@
 ﻿"EmployeeID","Name","Role","FindingType","Severity","Decision","Reviewer","ValidationStatus","Justification","TrailGeneratedDate"
-"E1001","Jordan Lee","Finance_Approver","UnauthorizedRole","Medium","Revoke","Access Reviewer","DecisionRecorded","Role is not approved for the Financial Analyst job title","2026-10-17 15:08:35"
-"E1005","Jamie Patel","CRM_Read","TerminatedEmployeeAccess","High","Revoke","Access Reviewer","DecisionRecorded","Employee is terminated and access should be removed through the approved process","2026-10-17 15:08:35"
+"E1001","Jordan Lee","Finance_Approver","UnauthorizedRole","Medium","Revoke","Access Reviewer","DecisionRecorded","Role is not approved for the Financial Analyst job title","2026-10-17 17:48:32"
+"E1005","Jamie Patel","CRM_Read","TerminatedEmployeeAccess","High","Revoke","Access Reviewer","DecisionRecorded","Employee is terminated and access should be removed through the approved process","2026-10-17 17:48:32"
